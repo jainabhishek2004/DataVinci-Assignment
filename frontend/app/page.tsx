@@ -22,7 +22,7 @@ export default function Home() {
     const fetchCampaigns = async () => {
       try {
         const response = await axios.get<Campaign[]>(
-          `http://127.0.0.1:8000/campaigns${statusFilter ? `?status=${statusFilter}` : ''}`
+          `https://datavinci-assignment-production.up.railway.app/campaigns${statusFilter ? `?status=${statusFilter}` : ''}`
         );
         setCampaigns(response.data);
         setError(null);
